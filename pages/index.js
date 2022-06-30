@@ -1,16 +1,9 @@
-import { useDispatch } from 'react-redux';
-import { clickHandle } from '../redux/handleSlice';
+import Header from '../components/core/header';
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch(clickHandle('nahid'));
-  };
-
   return (
-    <div className="text-red-500">
-      <button onClick={handleClick}>click</button>
+    <div className="w-full">
+      <Header />
     </div>
   );
 }
