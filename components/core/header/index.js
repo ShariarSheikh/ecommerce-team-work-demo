@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
+  AiOutlineFire,
   AiOutlineHeart,
   AiOutlineSearch,
   AiOutlineShoppingCart,
 } from 'react-icons/ai';
-import { BsPerson } from 'react-icons/bs';
+import { BsGrid, BsPerson } from 'react-icons/bs';
+import { ImHeadphones } from 'react-icons/im';
 import { IoLocationOutline, IoSync } from 'react-icons/io5';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import AppLink from '../../common/AppLink';
@@ -147,7 +149,64 @@ const Header = () => {
         </div>
       </div>
 
-      <div>bottom</div>
+      <div className="w-full flex justify-between h-20 items-center border-b border-gray-200">
+        <div className="flex h-full items-center">
+          <button className="flex items-center space-x-2 bg-[#3BB77E] rounded text-white outline-none hover:bg-[#18784b] duration-150 px-2 py-2">
+            {' '}
+            <BsGrid className="mr-2 w-6 h-6" /> Browse All Categories{' '}
+            <RiArrowDropDownLine className="w-6 h-6" />{' '}
+          </button>
+
+          <ul className="flex space-x-3 ml-3">
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              {' '}
+              <AiOutlineFire className="text-[#3BB77E] w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+              Deals
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Home{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="font-medium text-[#253D4E] hover:text-[#3BB77E] group">
+              About
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Shop{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Vendors{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Mega menu{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Blog{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="flex font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Page{' '}
+              <RiArrowDropDownLine className="text-gray-500 w-6 h-6 group-hover:text-[#3BB77E]" />{' '}
+            </li>
+            <li className="font-medium text-[#253D4E] hover:text-[#3BB77E] group duration-200">
+              Contact
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex items-center">
+          <ImHeadphones className="text-gray-500 w-6 h-6 mr-2" />
+          <div>
+            <h4 className="text-[#3BB77E] text-[22px] font-medium">
+              {' '}
+              1800 - 3333{' '}
+            </h4>
+            <p className="text-sm text-[#7E7E7E]">24/7 support center</p>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
